@@ -1,0 +1,63 @@
+.menu-lateral {
+    background-color: var(--azul-escuro);
+    padding: 2.5rem .5rem 0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: grid;
+    grid-template-rows: repeat(4, auto) 1fr;
+    width: 230px;
+    row-gap: 2rem;
+}
+
+.menu-lateral__logo {
+    justify-self: center;
+}
+
+.menu-lateral__link::before  {
+    padding-left: 1rem;
+    padding-right: .5rem;
+    vertical-align: middle;
+}
+
+/*Menu de navegacao (home, busca, sua biblioteca)*/
+.menu-lateral__link {
+    font-family: var(--fonte-textos);
+    font-weight: 600;
+    letter-spacing: 2px;
+    justify-self: start;
+    margin-bottom: .5rem;
+}
+
+.ativo {
+    background-color: var(--azul-medio);
+    border-radius: 5px;
+    padding: .75rem 0;
+}
+
+.menu-lateral__link--home::before {
+    content: url("../img/home.png");
+}
+
+.menu-lateral__link--busca::before {
+    content: url("../img/search.png");
+}
+
+.menu-lateral__link--biblioteca::before {
+    content: url("../img/bookmark.png");
+}
+/**/
+
+/*Menu de acoes (criar playlists e link para podcasts salvos)*/
+.menu-lateral__playlist {
+    text-transform: uppercase;
+    padding-left: 1rem;
+}
+
+.menu-lateral__link--playlist::before {
+    content: url("../img/add_box.png");
+}
+
+.menu-lateral__link--podcasts::before {
+    content: url("../img/stars.png");
+}
+/**/

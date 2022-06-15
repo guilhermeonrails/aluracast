@@ -1,0 +1,43 @@
+/*Variaveis globais*/
+:root {
+    --azul-escuro: #041833;
+    --azul-medio: #154580;
+    --azul-degrade: linear-gradient(180deg, var(--azul-medio) 0%, var(--azul-escuro) 100%);
+    --verde: #84EEC1;
+    --cinza: rgba(196, 196, 196, 0.2);
+    --cor-textos: #ffffff;
+    --fonte-textos: 'Open Sans', sans-serif;
+}
+
+/*Grid da pagina*/
+body {
+    color: var(--cor-textos);
+    background: var(--azul-degrade);
+    font-family: var(--fonte-textos);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        "aside header"
+        "aside main"
+        "footer footer";
+}
+
+.menu-lateral {
+    grid-area: aside;
+}
+
+.cabecalho {
+    grid-area: header;
+}
+
+.principal {
+    grid-area: main;
+}
+
+.rodape {
+    grid-area: footer;
+}
+
+
+
+

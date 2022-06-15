@@ -1,0 +1,166 @@
+.rodape {
+    background-color: var(--azul-medio);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    padding: 1rem;
+    column-gap: .75rem;
+    grid-template-rows: repeat(2, 28px);
+    grid-template-columns: auto 1fr auto;
+}
+
+/* Genericos como barra, botao, etc) */
+.rodape__barra {
+    position: relative;
+    opacity: 0.9;
+    border-radius: 10px;
+    background-color: white;
+    height: 4px;
+}
+
+.rodape__barra div {
+    position: absolute;
+    top: 0;
+    height: 4px;
+    border-radius: 10px;
+    opacity: 0.35;
+    background-color: white;
+}
+
+.rodape__botao {
+    width: fit-content;
+    height: fit-content;
+    vertical-align: top;
+}
+/**/
+
+/* Informacoes (imagem, titulo, subtitulo) */
+.rodape__musica {
+    display: grid;
+    grid-column: 1/2;
+    width: fit-content;
+    column-gap: .75rem;
+}
+.rodape__imagem {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.rodape__titulo {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.rodape__subtitulo {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+/**/
+
+/* Controles */
+.rodape__controles {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: fit-content;
+    justify-self: center;
+    align-items: center;
+    column-gap: .75rem;
+}
+
+.rodape__botao--voltar {
+    grid-row: 1/2;
+}
+
+.rodape__botao--anterior {
+    grid-row: 1/2;
+}
+
+
+.rodape__botao--play {
+    grid-row: 1/2;
+}
+
+.rodape__botao--avancar {
+    grid-row: 1/2;
+}
+
+.rodape__botao--proximo {
+    grid-row: 1/2;
+}
+/**/
+
+/* Reproducao */
+.rodape__reproducao {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: fit-content;
+    column-gap: .75rem;
+    justify-self: center;
+    grid-auto-columns: min-content;
+    align-items: center;
+}
+
+.rodape__horario {
+    font-size: .75rem;
+    width: min-content;
+}
+
+.rodape__horario--inicio {
+    grid-column: 1/2;
+}
+
+.rodape__horario--termino {
+    grid-column: 3/3;
+}
+
+.barra__container--reproducao {
+    width: 37vw
+}
+
+.rodape__barra--reproducao {
+    width: 25vw;
+    grid-column: 2/3;
+}
+
+.rodape__barra--reproducao div {
+    width: 37vw;
+}
+/**/
+
+/* Volume */
+.rodape__volume {
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 2/2;
+    width: fit-content;
+    align-items: center;
+    column-gap: .75rem;
+}
+
+.rodape__botao--volume-down{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.barra__container--volume {
+    width: 8vw;
+}
+
+.rodape__barra--volume {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 4vw;
+}
+
+.rodape__barra--volume div {
+    width: 8vw;
+}
+
+.rodape__botao--volume-up {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+/**/

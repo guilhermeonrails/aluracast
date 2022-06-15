@@ -1,0 +1,124 @@
+.container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.secao__cartoes {
+    display: grid;
+    --gap-cols: 1.25rem;
+    column-gap: var(--gap-cols);
+
+    --largura-minima-colunas: 100%/2 - var(--gap-cols)*(2-1)/2;
+    --largura-maxima-colunas: max(var(--largura-coluna), 100%/var(--quantidade-maxima-colunas) - var(--gap-cols)*(var(--quantidade-maxima-colunas)-1)/var(--quantidade-maxima-colunas));
+    --repeat-min: min(var(--largura-minima-colunas), var(--largura-maxima-colunas));
+
+    grid-template-columns: repeat(auto-fit, minmax(var(--repeat-min), 1fr));
+    row-gap: 1rem;
+}
+
+.secao__titulo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cartao__titulo, .rodape__titulo{
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.cartao__subtitulo, .rodape__subtitulo {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+/*Secao de cards horizontais*/
+
+.secao-horizontal .secao__cartoes {
+    --largura-coluna: 348px;
+    --quantidade-maxima-colunas: 3
+}
+
+.secao-horizontal .cartao {
+    background: var(--cinza);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "imagem episodio botao"
+        "imagem podcast botao"
+        "imagem player botao";
+    column-gap: 20px;
+    padding-right: .5rem;
+}
+
+.secao-horizontal .cartao__imagem {
+    grid-row: imagem;
+    height: 72px;
+}
+
+.secao-horizontal .cartao__titulo {
+    grid-area: episodio;
+    align-self: end;
+}
+
+.secao-horizontal .cartao__subtitulo {
+    grid-area: podcast;
+
+}
+
+.secao-horizontal .cartao__player {
+    grid-area: player;
+    width: 164px;
+    height: 4px;
+    background: white;
+    border-radius: 10px;
+}
+
+.secao-horizontal .cartao__botao {
+    grid-area: botao;
+}
+
+/*Secao de cards que verticais*/
+
+.secao-vertical {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.secao-vertical .secao__cartoes {
+    --largura-coluna: 165px;
+    --quantidade-maxima-colunas: 6
+}
+
+.secao-vertical .secao__titulo {
+    grid-column: 1/2;
+}
+
+.secao-vertical .secao__link {
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: end;
+}
+
+.secao-vertical .secao__cartoes {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.secao-vertical .cartao {
+    background: rgba(196, 196, 196, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.secao-vertical .cartao__imagem {
+    height: 128px;
+    margin-bottom: .5rem;
+}
+
+
